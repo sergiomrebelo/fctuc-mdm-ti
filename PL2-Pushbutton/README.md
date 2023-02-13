@@ -1,0 +1,24 @@
+# Arduino & Friends: Going Further (Week 2)
+
+Arduino controls LEDs based on the state of a pushbutton. 
+
+<img src="scheme.png"  alt="Circuit assembly used on this PL class" width="60%" height="auto">
+
+#### Required Material
+- Arduino Uno (or similar)
+- two LEDs
+- solderless breadboard
+- one 10kΩ resistor
+- one pushbutton
+- jumpers
+
+## Exercices
+The LED will turn ON while you have the finger on the button. 
+
+1. Connecting a pushbutton to the Arduino (see [Week2_Simple_Pushbutton_led](/Week2_Simple_Pushbutton_led))
+2. Connecting a pushbutton to the Arduino, avoiding bouncing (see [Week2_Pushbutton_led_debouncing](/Week2_Pushbutton_led_debouncing))
+
+
+
+## Challenge
+Adapt the same circuit assembly to use two external LEDs connected to pins 12 and 11. Make the LEDs flip alternately as the user presses the button 
