@@ -15,8 +15,8 @@ Arduino controls LEDs based on the state of a pushbutton.
 ## Exercices
 The LED will turn ON while you have the finger on the button. 
 
-1. Connecting a pushbutton to the Arduino (see [Week2_Simple_Pushbutton_led](/Week2_Simple_Pushbutton_led))
-2. Connecting a pushbutton to the Arduino, avoiding bouncing (see [Week2_Pushbutton_led_debouncing](/Week2_Pushbutton_led_debouncing))
+1. Connecting a pushbutton to the Arduino (see [Week2_Simple_Pushbutton_led](https://github.com/sergiomrebelo/fctuc-mdm-ti/tree/main/PL2-Pushbutton/Week2_Simple_Pushbutton_led))
+2. Connecting a pushbutton to the Arduino, avoiding bouncing (see [Week2_Pushbutton_led_debouncing](https://github.com/sergiomrebelo/fctuc-mdm-ti/tree/main/PL2-Pushbutton/Week2_Pushbutton_led_debouncing))
 
 
 
