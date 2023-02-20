@@ -1,6 +1,6 @@
 # Arduino & Friends: Going Further (Week 2)
 
-Arduino controls LEDs based on the state of a pushbutton. 
+Arduino controls LEDs based on the state of a pushbutton (pull-down). 
 
 <img src="scheme.png"  alt="Circuit assembly used on this PL class" width="60%" height="auto">
 
