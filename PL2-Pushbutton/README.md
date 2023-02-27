@@ -24,4 +24,4 @@ Adapt the same circuit assembly to use two external LEDs connected to two differ
 
 <img src="scheme.png"  alt="Circuit assembly used on challenge" width="60%" height="auto">
 
-[Solution](https://github.com/sergiomrebelo/fctuc-mdm-ti/tree/main/PL2-Pushbutton/Week2_Pushbutton_2_leds);
+[Solution](https://github.com/sergiomrebelo/fctuc-mdm-ti/tree/main/PL2-Pushbutton/Week2_Pushbutton_2_leds)
