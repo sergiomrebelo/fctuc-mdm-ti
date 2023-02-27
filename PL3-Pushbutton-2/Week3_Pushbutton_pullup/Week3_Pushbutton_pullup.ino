@@ -10,23 +10,26 @@
 * @since:   24–02–2023      
 */
 
-const int BT_PIN = 2;    // pushbutton pin
+const int BT_PIN = 2;             // pushbutton pin
+const int LED_PIN = LED_BUILTIN;  // led pin
 
-int btState = 0;             // variable for reading the pushbutton status
+int btState;                 // variable for reading the pushbutton status
 int ledState = HIGH;         // current state of the led
 int previousLedState = LOW;  // previous state of the led
 
 // time variables
-long lastDebounceTime = 0;   // the last time the output pin was toggled
-long debounceTimeDelay = 100;  // the bounce time;
+long lastDebounceTime = 0;  // the last time the output pin was toggled
+long debounceDelay = 50;    // the bounce time;
 
 
 void setup() {
   // init pins
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(LED_PIN, OUTPUT);
+  //configure pin 2 as an input and enable the internal pull-up resistor
   pinMode(BT_PIN, INPUT_PULLUP);
 
-  digitalWrite(LED_BUILTIN, ledState);
+  // set initial LED state
+  digitalWrite(LED_PIN, ledState);
 }
 
 void loop() {
@@ -38,24 +41,37 @@ void loop() {
   // long enough since the last press to ignore any noise:.
 
   // If the switch changed, due to noise or pressing:
-  if (reading != lastDebounceTime) {
+  if (reading != previousLedState) {
     // reset the debouncing timer
     lastDebounceTime = millis();
   }
 
-  if ((millis() - lastDebounceTime) > debounceTimeDelay) {
-    // whatever the reading is at, it is been there for longer
-    // than the debounce delay, so take it as the actual current state
-    btState = reading;
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    // whatever the reading is at, it's been there for longer than the debounce
+    // delay, so take it as the actual current state:
 
-    if (btState == HIGH) {
+    // if the button state has changed:
+    if (reading != btState) {
+      btState = reading;
+
+      // only toggle the LED if the new button state is HIGH
+      if (btState == HIGH) {
         ledState = !ledState;
       }
+    }
   }
 
   // set the LED using the state of the button
-  digitalWrite(LED_BUILTIN, ledState);
+  // turn off and on the led by clicking
+  // digitalWrite(LED_PIN, ledState);
 
-  // save the reading. 
+  // turn on the led when push the bt
+  // invert signal gathered by bt
+  digitalWrite(LED_PIN, !btState);
+
+  // turn off the led when push the bt
+  // digitalWrite(LED_PIN, !btState);
+
+  // save the reading.
   previousLedState = reading;
 }
