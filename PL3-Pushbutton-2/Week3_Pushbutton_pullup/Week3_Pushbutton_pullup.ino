@@ -18,13 +18,15 @@ int previousLedState = LOW;  // previous state of the led
 
 // time variables
 long lastDebounceTime = 0;   // the last time the output pin was toggled
-long debounceTimeDelay = 0;  // the bounce time;
+long debounceTimeDelay = 100;  // the bounce time;
 
 
 void setup() {
   // init pins
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(BT_PIN, INPUT_PULLUP);
+
+  digitalWrite(LED_BUILTIN, ledState);
 }
 
 void loop() {
@@ -45,10 +47,14 @@ void loop() {
     // whatever the reading is at, it is been there for longer
     // than the debounce delay, so take it as the actual current state
     btState = reading;
+
+    if (btState == HIGH) {
+        ledState = !ledState;
+      }
   }
 
   // set the LED using the state of the button
-  digitalWrite(LED_BUILTIN, btState);
+  digitalWrite(LED_BUILTIN, ledState);
 
   // save the reading. 
   previousLedState = reading;

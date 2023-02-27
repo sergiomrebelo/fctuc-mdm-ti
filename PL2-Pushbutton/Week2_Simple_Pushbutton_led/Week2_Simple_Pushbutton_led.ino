@@ -11,7 +11,7 @@
 */
 
 const int BT_PIN = 2; // pushbutton pin
-const int LED_PIN = 13; // led pin
+const int LED_PIN = 13;
 
 int state = 0; // variable for reading the pushbutton status
 
