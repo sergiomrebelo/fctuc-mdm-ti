@@ -14,7 +14,7 @@
 
 import processing.serial.*;
 Serial myPort;
-String value;
+String value = "";
 
 void setup() {
   size(500, 500);

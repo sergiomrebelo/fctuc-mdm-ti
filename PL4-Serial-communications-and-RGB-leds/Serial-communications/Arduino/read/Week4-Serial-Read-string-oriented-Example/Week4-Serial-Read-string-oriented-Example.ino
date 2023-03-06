@@ -31,14 +31,14 @@ void loop() {
   // while there's any serial available, read it:
   while (Serial.available() > 0) {
     // reads characters from the serial buffer into a String. (until find a terminator char)
-    str = Serial.readStringUntil('\n');
+    // str = Serial.readStringUntil('\n');
 
     // converts the string to int
     // parses serial input until it finds the first char that is not a digit
     x = Serial.parseInt();
 
     // print the results
-    Serial.println((String) "str: " + str);
+    // Serial.println((String) "str: " + str);
     Serial.println((String) "x: " + x);
   }
 }
