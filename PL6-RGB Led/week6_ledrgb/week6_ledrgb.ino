@@ -3,7 +3,7 @@
 * Universidade de Coimbra
 * MSc in Design and Multimedia
 *
-* Week 4
+* Week 6
 * Control a rgb led with arduino
 * 
 * @authors: Sérgio M. Rebelo, Ana Cláudia Rodrigues, and Tiago Cruz
