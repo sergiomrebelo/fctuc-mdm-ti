@@ -14,3 +14,17 @@ out
 */hidden
 PL4-Serial-communications-and-RGB-leds/Serial-communications/exercise 3/_hidden/Week4_exercise3_arduino/Week4_exercise3_arduino.ino
 PL4-Serial-communications-and-RGB-leds/Serial-communications/exercise 3/_hidden/week4_exercise3_p5/week4_exercise3_p5.pde
+
+*/.idea/*
+*/.idea
+PL4-Serial-communications/js/_hidden/script-2.js
+
+*/.node_modules/
+*/.node_modules/*
+PL4-Serial-communications/js/.idea/js.iml
+PL4-Serial-communications/js/.idea/modules.xml
+PL4-Serial-communications/js/.idea/vcs.xml
+PL4-Serial-communications/js/http-requests/node_modules/*
+
+node_modules
+node_modules/
