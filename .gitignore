@@ -28,3 +28,5 @@ PL4-Serial-communications/js/http-requests/node_modules/*
 
 node_modules
 node_modules/
+.idea/
+.idea
