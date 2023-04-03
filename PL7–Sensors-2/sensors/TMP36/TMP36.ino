@@ -11,7 +11,7 @@
 * @basedon: https://learn.adafruit.com/thermistor/using-a-thermistor
 */
 
-int sensorPin = 0; 
+int sensorPin = A0; 
 
 void setup() {
   Serial.begin(9600);                      

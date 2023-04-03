@@ -19,7 +19,7 @@ setup = () => {
 
     // init serial communication
     serial = new p5.SerialPort();
-    serial.openPort(`/dev/cu.usbmodem2101`);
+    serial.openPort(`/dev/cu.usbmodem1101`);
 
     // print version of p5.serialport library
     console.info('p5.serialport.js ' + serial.version);
@@ -39,7 +39,7 @@ setup = () => {
         console.info(`serial port ready`);
     });
 
-    serial.on('data', update);
+    serial.on('<data>', update);
 
     circles.push(new Circle(width / 2 - 100, height / 2, 100, false));
     circles.push(new Circle(width / 2 + 100, height / 2, 100, false))

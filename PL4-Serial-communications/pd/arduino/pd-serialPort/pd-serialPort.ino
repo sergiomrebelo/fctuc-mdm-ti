@@ -4,8 +4,7 @@
 * MSc in Design and Multimedia
 *
 * T8
-* Connection of Arduino with Pure Data
-* 
+* Connection of Arduino with TMP46
 * @authors: Sérgio M. Rebelo, Ana Cláudia Rodrigues, and Tiago Cruz
 * @since:   16–03–2023      
 */

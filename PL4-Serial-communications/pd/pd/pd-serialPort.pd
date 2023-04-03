@@ -1,4 +1,4 @@
-#N canvas 437 84 911 726 12;
+#N canvas 127 25 911 689 12;
 #X obj 31 280 comport 2 9600;
 #X msg 32 138 devices;
 #X msg 64 196 close 2;
