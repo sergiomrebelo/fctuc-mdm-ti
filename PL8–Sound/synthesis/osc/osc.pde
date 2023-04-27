@@ -4,7 +4,7 @@
  * MSc in Design and Multimedia
  *
  * Week 7 — Exercise 4
- * Sound Synthesis
+ * Sound Synthesis with square wave oscillator 
  *
  * @authors: Sérgio M. Rebelo, Ana Cláudia Rodrigues, and Tiago Cruz
  * @since:   28–04–2023
