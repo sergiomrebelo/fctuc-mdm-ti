@@ -26,7 +26,7 @@ void setup() {
   String[] devices = Capture.list();
   // printArray(devices);
 
-  cam = new Capture(this, 640, 480, devices[0]);
+  cam = new Capture(this, 640, 480, devices[1]);
   cam.start();
 
   //set up columns and rows

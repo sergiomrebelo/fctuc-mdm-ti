@@ -26,23 +26,23 @@ void setup() {
     exit();
   }
 
-  cam = new Capture(this, 640, 480, devices[0]);
+  cam = new Capture(this, 640, 480, devices[1]);
   cam.start();
 
   colorMode(HSB, 360, 100, 100);
   noStroke();
   smooth();
 
-  frame = loadImage("sample-image.jpg");
-  frame.resize(width, 0);
-  surface.setSize(frame.width, frame.height);
+  // frame = loadImage("sample-image.jpg");
+  // frame.resize(width, 0);
+  // surface.setSize(frame.width, frame.height);
 }
 
 void draw () {
   if (cam.available()) {
     background(0);
     cam.read();
-    // frame = cam.copy();
+    frame = cam.copy();
 
     int[] histogram = new int[360];
 

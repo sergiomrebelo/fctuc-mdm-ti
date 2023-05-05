@@ -42,6 +42,7 @@ void setup() {
 
 void draw() {
   if (cam.available()) {
+    background(0);
     cam.read();
     cam.loadPixels();
     // Difference between the current frame
@@ -50,18 +51,26 @@ void draw() {
     for (int i = 0; i < numPixels; i++) { // For each pixel in the video frame...
       color current = cam.pixels[i];
       color bkgd = backgroundPixels[i];
-  
+
       int diffR = (int) abs(red (current) - red (bkgd));
       int diffG = (int) abs(green (current) - green (bkgd));
       int diffB = (int) abs(blue (current) - blue (bkgd));
 
       movement += diffR + diffG + diffB;
 
-      pixels[i] = color(diffR, diffG, diffB);
+      // display difference between current and background
+      // pixels[i] = color(diffR, diffG, diffB);
+
+      // display diferent pixels
+      if (diffR > 20 && diffG > 20 && diffB > 20) {
+        pixels[i] = current;
+      } else {
+        pixels[i] = color (0);
+      }
     }
     updatePixels();
     // Print out the total amount of movement
-    // println(movement);
+    println(movement);
   }
 }
 
