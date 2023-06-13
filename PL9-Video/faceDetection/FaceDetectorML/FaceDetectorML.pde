@@ -14,6 +14,7 @@
 import ch.bildspur.vision.*;
 import ch.bildspur.vision.result.*;
 
+
 PImage testImage;
 
 DeepVision vision = new DeepVision(this);

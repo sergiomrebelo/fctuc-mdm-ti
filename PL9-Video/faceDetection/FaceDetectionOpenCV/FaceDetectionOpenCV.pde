@@ -46,7 +46,7 @@ void setup() {
   // load face classifier
   faceClassifier.loadCascade(OpenCV.CASCADE_FRONTALFACE);
   // load eye classifier
-  eyesClassifier.loadCascade(OpenCV.CASCADE_EYE);
+  eyesClassifier.loadCascade(OpenCV.CASCADE_EYE); // CASCADE_FRONTALFACE
   
   // frame = loadImage("sample-image.jpg");
   // frame.resize(width, 0);
