@@ -1,6 +1,7 @@
 // Calculate the difference between two frames
 public PImage frameDifference (PImage previous, PImage current) {
   PImage dif = new PImage(current.width, current.height, ARGB);
+  dif.loadPixels();
   for (int i =0; i <current.pixels.length; i++) {
     color currentP = current.pixels[i];
     color previousP = previous.pixels[i];
@@ -8,10 +9,11 @@ public PImage frameDifference (PImage previous, PImage current) {
       dif.pixels[i] = color(255);
     }
   }
+  dif.updatePixels();
   return dif;
 }
 
-// Calculate the amount of movement in each cell 
+// Calculate the amount of movement in each cell
 // (based on the pixel brightness)
 public float [][] detectMovement (PImage frameDif, int rows, int columns, int threshold) {
   if (rows <= 0) rows = 1;
@@ -22,10 +24,12 @@ public float [][] detectMovement (PImage frameDif, int rows, int columns, int th
   int wid = frameDif.width / columns;
   int hei = frameDif.height / rows;
 
+  PImage frame = frameDif.copy();
   for (int x=0; x<columns; x++) {
     for (int y=0; y<rows; y++) {
-      PImage sample = frameDif.copy().get(x*wid, y*hei, wid, hei);
-      int sum = 0;      
+      PImage sample = frame.get(x*wid, y*hei, wid, hei);
+      sample.loadPixels();
+      int sum = 0;
       for (int i=0; i <sample.pixels.length; i++) {
         sum+= brightness(sample.pixels[i]);
       }
@@ -33,7 +37,7 @@ public float [][] detectMovement (PImage frameDif, int rows, int columns, int th
       motion[x][y] = mean > threshold ? mean : 0;
     }
   }
-  
+
   // debug
   // image(sample, x*wid, y*hei);
 
