@@ -13,6 +13,7 @@ The Interface Technologies course is part of M.Sc. [Design and Multimedia](https
 
 ## Table of Contents
 
+
 ## Introduction
 This repository is a collection of exercises, code, and documentation for Interface Technologies course. Through this program, participants will learn to:
 
@@ -21,9 +22,17 @@ This repository is a collection of exercises, code, and documentation for Interf
 3. Explore basic electronics concepts such as capacitors, sensors, and communication protocols. 
 4. Build interactive projects using physical components.
 
-## Topics
-### [Hello World](/1-Hello-World)
+## Prerequisites
+This course is designed for beginners with no prior experience in electronics or programming. However, participants should have a basic understanding of computer programming and be comfortable using a computer.
+
+## Learning Modules
+1. **[Hello World](/1-Hello-World)** \
 Learn the basics of Arduino programming, including setting up the IDE and running your first "Hello World" program.
 
+1. **[Pushbuttons](/2-Pushbuttons)** \
+   Learn the basics of Arduino programming, including setting up the IDE and running your first "Hello World" program.
 
-Winter 2023
+
+
+
+Winter 2023, and 2025
