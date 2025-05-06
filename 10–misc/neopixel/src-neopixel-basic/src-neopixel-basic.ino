@@ -8,7 +8,6 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(numPixels, neoPixelPin, NEO_GRB + NE
 void setup() {
   strip.begin();
   strip.setPixelColor(0,0,0,255);
-
   strip.show();
   strip.clear();
 }
