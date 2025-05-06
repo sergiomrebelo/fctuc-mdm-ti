@@ -26,10 +26,10 @@ This repository is a collection of exercises, code, and documentation for Interf
 This course is designed for beginners with no prior experience in electronics or programming. However, participants should have a basic understanding of computer programming and be comfortable using a computer.
 
 ## Learning Modules
-1. **[Hello World](/1-Hello-World)** \
+1. [Hello World](/1-Hello-World) \
 Learn the basics of Arduino programming, including setting up the IDE and running your first "Hello World" program.
 
-1. **[Pushbuttons](/2-Pushbuttons)** \
+1. [Pushbuttons](/2-Pushbuttons) \
    Learn the basics of Arduino programming, including setting up the IDE and running your first "Hello World" program.
 
 
