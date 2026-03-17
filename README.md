@@ -24,13 +24,45 @@ This repository is a collection of exercises, code, and documentation for Interf
 This course is designed for beginners with no prior experience in electronics or programming. However, participants should have a basic understanding of computer programming and be comfortable using a computer.
 
 ## Learning Modules
-1. [Hello World](/1-Hello-World) \
-Learn the basics of Arduino programming, including setting up the IDE and running your first "Hello World" program.
 
-1. [Pushbuttons](/2-Pushbuttons) \
-   Learn the basics of Arduino programming, including setting up the IDE and running your first "Hello World" program.
+# Learning Modules
+01. [Hello World](/01-hello-world) \
+Learn how to set up the Arduino IDE and run your first simple program.
+
+02. [Pushbuttons](/02-leds-and-pushbuttons) \
+Control LEDs and read basic input using pushbuttons.
+
+03. [Serial Communication](/03-serial-communications)\
+Exchange data between Arduino and your computer using the serial interface.
+
+04. [RGB Led](/04-rgb-led) \
+Mix colors and control multicolored RGB LEDs with Arduino.
+
+05. [Analog Sensors and Voltage Dividers](/05-analog-sensors-and-voltage-dividers) \
+Read analog values and understand how voltage dividers work.
+
+06. [MQTT](/06-MQTT) \
+Send and receive data over the network using the MQTT protocol.
+
+07. [Advanced Analog Sensors](/07-analog-sensors-2) \
+Explore more advanced analog sensors and signal‑reading techniques.
+
+08. [Pulse‑width Modulation and Series and Parallel Resistor Circuits](/08-PWR) \
+Learn how Arduino uses pulse‑width modulation (PWM) while exploring how series and parallel resistor circuits shape current, voltage, and component behavior.
+
+09. [Sound Generation and Analysis](/09–sound) \
+Explore the fundamentals of sound generation and analasys, including how audio signals are created, shaped, and interpreted.
+
+10. [Video and Computer Vision](/10-video) \
+Explore how video processing and computer vision techniques can be used to interpret and respond to visual information.
+
+11. [Capacitors](/11-capacitors) \
+Understand how capacitors work and use them in basic circuits.
+
+12. [Others](/12–others) \
+Explore additional components and sensors.
 
 
-
-
+   
+Sérgio M. Rebelo
 Winter 2023, and 2025–2026
