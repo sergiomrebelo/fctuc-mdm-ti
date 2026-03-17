@@ -62,7 +62,11 @@ Understand how capacitors work and use them in basic circuits.
 Explore additional components and sensors.
 
 
-   
-Sérgio M. Rebelo
+## Contributors
+
+
+[Sérgio M. Rebelo](https://sergiorebelo.work)
+Ana Cláudia Rodrigues
+Tiago Cruz
 
 Winter 2023, and 2025–2026
