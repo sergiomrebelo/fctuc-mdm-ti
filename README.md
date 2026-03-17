@@ -25,7 +25,6 @@ This course is designed for beginners with no prior experience in electronics or
 
 ## Learning Modules
 
-# Learning Modules
 01. [Hello World](/01-hello-world) \
 Learn how to set up the Arduino IDE and run your first simple program.
 
@@ -65,4 +64,5 @@ Explore additional components and sensors.
 
    
 Sérgio M. Rebelo
+
 Winter 2023, and 2025–2026
