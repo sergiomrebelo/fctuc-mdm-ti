@@ -26,6 +26,9 @@ void loop() {
       redState = !redState;
     } else if (str.equalsIgnoreCase("G")) {
       greenState = !greenState;
+    } else  {
+      redState = LOW;
+      greenState = LOW;
     }
   }
 

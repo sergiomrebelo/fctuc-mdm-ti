@@ -9,9 +9,7 @@ and hardware parts. At the end of the course, students should be able to face th
 contexts, ensuring not only the aesthetic quality but also the usability and robustness of the implementation of their
 proposals, resulting from the adequacy of their solutions to the needs of different projects.
 
-The Interface Technologies course is part of M.Sc. [Design and Multimedia](https://dm.dei.uc.pt/) of University of Coimbra (Portugal)
-
-## Table of Contents
+The [Interface Technologies](https://apps.uc.pt/courses/EN/unit/85170/21924/2022-2023) course is part of M.Sc. [Design and Multimedia](https://dm.dei.uc.pt/) of University of Coimbra, Portugal
 
 
 ## Introduction
@@ -35,4 +33,4 @@ Learn the basics of Arduino programming, including setting up the IDE and runnin
 
 
 
-Winter 2023, and 2025
+Winter 2023, and 2025–2026

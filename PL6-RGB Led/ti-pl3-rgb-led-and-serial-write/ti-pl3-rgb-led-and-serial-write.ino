@@ -14,7 +14,11 @@ void setup() {
 }
 
 void loop() {
-  while (Serial.available()) {
+
+  digitalWrite(RED, HIGH);
+  digitalWrite(GREEN, LOW);
+  digitalWrite(BLUE, HIGH);
+  /* while (Serial.available()) {
     char incomingByte = (char)Serial.read();
     if (incomingByte == 'R') {
       if (vRed == HIGH) {
@@ -23,10 +27,10 @@ void loop() {
         vRed = HIGH;
       }
     }
-  }
+  }*/
 
 
-  digitalWrite(RED, vRed);
+  digitalWrite(RED, HIGH);
   digitalWrite(GREEN, LOW);
   digitalWrite(BLUE, HIGH);
 }
