@@ -31,9 +31,12 @@ void serialEvent( Serial myPort) {
     String val = myPort.readString();
     val = val.trim(); // or strip()
     String [] sp = split(val, ":");
-  
+
     if (sp!=null) {
       if (sp.length == 2) {
+        if (sp[0].equalsIgnoreCase("-99999") && sp[1].equalsIgnoreCase("-99999")) {
+          exit();
+        }
         PVector joystick = new PVector(
           int(sp[0])/512f*5,
           int(sp[1])/512f*5

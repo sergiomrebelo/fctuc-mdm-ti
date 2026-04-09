@@ -9,6 +9,12 @@ void setup() {
   Serial.begin(9600);
   elapsed = millis();
 
+  pinMode(LED_BUILTIN, OUTPUT);
+  
+  // visual feedback
+  Serial.println ("Starting calibration");
+  digitalWrite(LED_BUILTIN, HIGH);
+
   // Calibration: max and min values when still
   // run a small loop on the setup
   // the user is not spose to touch joystick
@@ -21,9 +27,10 @@ void setup() {
     minX = max(x, minX);
     minY = max(y, minY);
   }
-  // End of calibration
+  // end of calibration
   Serial.println ("resting position of x ["+(String)minX+","+(String)maxX+"]");
   Serial.println ("resting position of y ["+(String)minY+","+(String)maxY+"]");
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 void loop() {
@@ -31,8 +38,8 @@ void loop() {
     long x = analogRead(BUTTON_X);
     long y = analogRead(BUTTON_Y);
 
-    // Serial.println("x: " + (String)x);
-    // Serial.println("y: " + (String)y);
+    Serial.println("x: " + (String)x);
+    Serial.println("y: " + (String)y);
 
     elapsed = millis();
   }

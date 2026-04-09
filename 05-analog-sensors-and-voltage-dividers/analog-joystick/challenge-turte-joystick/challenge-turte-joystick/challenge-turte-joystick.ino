@@ -1,6 +1,5 @@
 const long BUTTON_X = A0, BUTTON_Y = A1;
 const long BUTTON_SEL = 2;
-// callibration
 const long CALIBRATION_TIME = 10000;
 long maxX = -1, minX = 1025, maxY = -1, minY = 1025;
 // ellapsed time
@@ -10,10 +9,7 @@ void setup() {
   Serial.begin(9600);
   elapsed = millis();
 
-  // Calibration: max and min values when still
-  // run a small loop on the setup
-  // the user is not spose to touch joystick
-  // and system will collect the interval readings during rest
+  // Calibration
   while ((millis() - elapsed) < CALIBRATION_TIME) {
     Serial.println("calibrating: " + (String)(millis() - elapsed));
     long x = analogRead(BUTTON_X);
@@ -24,7 +20,7 @@ void setup() {
     maxY = max(y, maxY);
     minY = min(y, minY);
   }
-  // End of calibration
+
   Serial.println("resting position of x [" + (String)minX + "," + (String)maxX + "]");
   Serial.println("resting position of y [" + (String)minY + "," + (String)maxY + "]");
 
@@ -35,15 +31,15 @@ void setup() {
 void loop() {
   if (millis() - elapsed > 100) {
     // push buttom
-    const long led = !digitalRead(BUTTON_SEL);
-    digitalWrite (LED_BUILTIN, led);
+    const int close = !digitalRead(BUTTON_SEL);
+    digitalWrite(LED_BUILTIN, close);
 
     // potentiometers
     long x = analogRead(BUTTON_X);
     long y = analogRead(BUTTON_Y);
 
     // Serial.println("x: " + (String)x + " | y:"+ (String)y);
-    //Serial.println("y: " + (String)y);
+    // Serial.println("y: " + (String)y);
 
     long posX = 0, posY = 0;
 
@@ -57,6 +53,11 @@ void loop() {
 
     Serial.println((String)posX + ":" + (String)posY);
     elapsed = millis();
-    
-  } 
+
+    if (close == HIGH){
+       Serial.println("-99999:-99999");
+    }
+  }
+
+  
 }

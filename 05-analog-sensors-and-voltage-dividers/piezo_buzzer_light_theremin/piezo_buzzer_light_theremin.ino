@@ -62,5 +62,5 @@ void loop() {
 
   Serial.println((String) "current pitch: " + pitch + "(" + lightValue + ")");
 
-  delay(100);
+  // delay(100);
 }
