@@ -7,14 +7,14 @@
 * Thermistor
 * 
 * @authors: Sérgio M. Rebelo, Ana Cláudia Rodrigues, and Tiago Cruz
-* @since:   16–03–2023      
+* @since:   12–04–2026     
 * @basedon: https://learn.adafruit.com/thermistor/using-a-thermistor
 */
 
 // which analog pin to connect
 #define THERMISTORPIN A0
 // resistance at 25 degrees C
-#define THERMISTORNOMINAL 10000 
+#define THERMISTORNOMINAL 10000
 // temp. for nominal resistance (almost always 25 C)
 #define TEMPERATURENOMINAL 25
 // how many samples to take and average,
@@ -23,13 +23,13 @@
 // The beta coefficient of the thermistor // (usually 3000-4000)
 #define BCOEFFICIENT 3950
 // the value of the 'other' resistor
-#define SERIESRESISTOR 10000 // 10000
+#define SERIESRESISTOR 10000  // 10000
 
 int samples[NUMSAMPLES];
 
 void setup() {
   Serial.begin(9600);
-  // analogReference(EXTERNAL);
+  analogReference(AR_EXTERNAL);
 }
 
 
@@ -54,8 +54,15 @@ void loop() {
   Serial.println(average);
 
   // convert the value to resistance
-  average = 1023 / average - 1;
-  average = SERIESRESISTOR / average;
+  // NTC
+  // average = 1023 / average - 1;
+  // average = SERIESRESISTOR / average;
+
+  // PTC
+  average = (1023 / average);
+  average = SERIESRESISTOR * average;
+  
+
 
   Serial.print("Thermistor resistance ");
   Serial.println(average);

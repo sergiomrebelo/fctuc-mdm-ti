@@ -8,6 +8,8 @@ MQTTClient client;
 
 float roll, pitch;
 
+boolean fake = false;
+
 void setup() {
   String[] ports = Serial.list();
   printArray(ports);
@@ -19,8 +21,17 @@ void setup() {
 }
 
 void draw() {
-  client.publish("/roll", str(roll));
-  client.publish("/pitch", str(pitch));
+
+  if (fake == false) {
+    client.publish("/roll", str(roll));
+    client.publish("/pitch", str(pitch));
+  } else {
+    roll = random(0, TWO_PI);
+    pitch = random(0, TWO_PI);
+    client.publish("/roll", str(roll));
+    client.publish("/pitch", str(pitch));
+  }
+
   println ("roll = "+roll+" | pitch = "+pitch);
 }
 

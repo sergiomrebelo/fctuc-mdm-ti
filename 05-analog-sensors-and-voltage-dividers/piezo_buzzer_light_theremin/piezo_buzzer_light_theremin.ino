@@ -14,7 +14,7 @@
 const int LDR_PIN = A0;
 const int LED_PIN = LED_BUILTIN;
 const int BUZZER_PIN = 8;
-const bool calibrate = false;
+const bool calibrate = true;
 
 int lightValue = 0;   // variable to store the value coming from the sensor
 int lightLow = 1023;  // variable to calibrate low value
@@ -60,7 +60,10 @@ void loop() {
   // play the tone for 20 ms on pin 8
   tone(BUZZER_PIN, pitch, 20);
 
-  Serial.println((String) "current pitch: " + pitch + "(" + lightValue + ")");
+  // Serial.println((String) "current pitch: " + pitch + "(" + lightValue + ")");
+  // serial plotter
+  Serial.println((String) "pitch:" + pitch);
+  Serial.println((String) "light:" + lightValue);
 
   // delay(100);
 }

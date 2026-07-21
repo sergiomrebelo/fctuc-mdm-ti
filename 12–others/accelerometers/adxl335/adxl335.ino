@@ -13,7 +13,7 @@ void setup() {
   // analogReference(EXTERNAL);
 
   // Supported on Uno R4
-  analogReference(AR_EXTERNAL);
+  // analogReference(AR_EXTERNAL);
 
   Serial.begin(9600);
 }
@@ -44,8 +44,9 @@ void loop() {
   // Serial.print("Roll: " + (String)roll + "° ");
   // Serial.println("Pitch: " + (String) + pitch + "°");
   // Serial.print("x: " + (String)xRaw + " | ");
-  // Serial.print("yAccel: " + (String)yRaw + " | ");
-  // Serial.println("zAccel: " + (String)zRaw);
+  Serial.println("x: " + (String)xRaw);
+  Serial.println("y: " + (String)yRaw);
+  Serial.println("z: " + (String)zRaw);
 
   // sent results to p5
   Serial.println((String)roll+"/"+(String)pitch);

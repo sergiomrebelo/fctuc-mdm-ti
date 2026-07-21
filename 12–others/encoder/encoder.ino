@@ -33,10 +33,14 @@ void loop() {
     }
     Serial.print(count);
     Serial.print(" | ");
+    Serial.println("");
   }
   encoderPinA_prev = encoderPinA_value;
 
   // check if button is pressed (pin SW)
-  if (digitalRead(encoderBtn) == LOW) Serial.println("Button Pressed");
-  else Serial.println("Button Released");
+  //if (digitalRead(encoderBtn) == LOW) Serial.println("Button Pressed");
+  // else Serial.println("Button Released");
+
+  delay(10);
 }
+

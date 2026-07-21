@@ -98,6 +98,10 @@ void toneGen(long events) {
   }
 }
 
+
+// 
+
+
 void updateReadings(int distance) {
  acum=acum-readVect[cnt];
  readVect[cnt]=distance;

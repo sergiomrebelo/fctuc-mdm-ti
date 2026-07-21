@@ -10,7 +10,8 @@ float roll = 0, pitch = 0, rollFilter = 0, pitchFilter = 0;
 
 void setup() {
   randomSeed(millis());
-  size (960, 640, P3D);
+  // size (960, 640, P3D);
+  fullScreen(P3D, 2);
 
   client = new MQTTClient(this);
   client.connect("mqtt://public:public@public.cloud.shiftr.io", CLIENT_ID);

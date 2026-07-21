@@ -10,7 +10,7 @@
 * @since:   16–03–2023      
 */
 
-const int ledPin = 13;
+const int ledPin = LED_BUILTIN;
 const int knockSensor = A0;
 // threshold value to decide when the detected sound is a knock or not
 const int threshold = 100;
@@ -31,7 +31,7 @@ void setup() {
 void loop() {
   // read the sensor and store it in the variable sensorReading:
   sensorReading = analogRead(knockSensor);
-  Serial.println (sensorReading);
+  // Serial.println (sensorReading);
   // if the sensor reading is greater than the threshold:
   if (sensorReading >= threshold) {
     // toggle the status of the ledPin:
@@ -39,7 +39,8 @@ void loop() {
     // update the LED pin itself:
     digitalWrite(ledPin, ledState);
     // send the string "Knock!" back to the computer,
-    // followed by newline  Serial.println("Knock!");
+    // followed by newline  
+    Serial.println("Knock!");
   }
   // delay to avoid overloading the serial port buffer
   delay(100);
